@@ -1,19 +1,117 @@
-
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width,initial-scale=1" />
-		<title>Tiny Vercel Site</title>
-		<link rel="stylesheet" href="styles/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta
+			name="description"
+			content="A small interactive website about television energy use in Australia."
+		/>
+		<title>Australian Appliance Energy</title>
+		<link rel="stylesheet" href="styles/styles.css" />
+		<script src="js/main.js" defer></script>
 	</head>
 	<body>
-		<main class="container">
-			<h1>Tiny Vercel Site</h1>
-			<p>A minimal HTML/CSS/JS starter you can deploy to Vercel.</p>
-			<button id="toggle">Toggle theme</button>
-			<div id="info" class="card">Click the button to toggle theme.</div>
+		<header class="site-header">
+			<nav class="nav" aria-label="Main navigation">
+				<button class="brand" type="button" data-page-link="home" aria-label="Go to home page">
+					<span class="brand-mark" aria-hidden="true">&#x26A1;</span>
+					<span>Energy Guide</span>
+				</button>
+
+				<div class="nav-links">
+					<button type="button" data-page-link="home">Home</button>
+					<button type="button" data-page-link="televisions">Televisions</button>
+					<button type="button" data-page-link="about">About Us</button>
+				</div>
+			</nav>
+		</header>
+
+		<main>
+			<section class="page hero" id="home">
+				<div>
+					<p class="eyebrow">Australian appliance energy consumption</p>
+					<h1>Understand the energy used by televisions</h1>
+					<p class="lead">
+						Screen size, display technology and star rating can help consumers compare
+						television models before buying.
+					</p>
+					<button class="primary-button" type="button" data-page-link="televisions">
+						View television data
+					</button>
+				</div>
+
+				<div class="summary-card" aria-label="What this website explores">
+					<h2>What we explore</h2>
+					<ul>
+						<li>Screen technology and size</li>
+						<li>Average-mode power</li>
+						<li>Annual energy consumption</li>
+						<li>Energy star ratings</li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="page content-page" id="televisions" hidden>
+				<p class="eyebrow">Televisions</p>
+				<h1>Example energy records</h1>
+				<p class="lead">
+					These sample records show fields that can be compared when exploring television
+					energy use in the Australian market.
+				</p>
+
+				<div class="table-wrap">
+					<table>
+						<caption>Sample records from the supplied television dataset</caption>
+						<thead>
+							<tr>
+								<th scope="col">Brand</th>
+								<th scope="col">Screen technology</th>
+								<th scope="col">Screen size (cm)</th>
+								<th scope="col">Average power (W)</th>
+								<th scope="col">Star rating</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr><td>Philips</td><td>LCD (LED)</td><td>59.7</td><td>17.38</td><td>6.0</td></tr>
+							<tr><td>Philips</td><td>LCD (LED)</td><td>108.0</td><td>43.23</td><td>6.0</td></tr>
+							<tr><td>Philips</td><td>LCD (LED)</td><td>123.2</td><td>47.37</td><td>7.0</td></tr>
+						</tbody>
+					</table>
+				</div>
+
+				<p class="note">
+					This page is ready for charts created during the later data-visualisation tasks.
+				</p>
+			</section>
+
+			<section class="page content-page" id="about" hidden>
+				<p class="eyebrow">About Us</p>
+				<h1>About this project</h1>
+				<p class="lead">
+					This student project demonstrates HTML structure, CSS styling, JavaScript
+					navigation, GitHub version control and Vercel hosting.
+				</p>
+
+				<div class="about-grid">
+					<article>
+						<h2>Purpose</h2>
+						<p>
+							The website provides a simple place to communicate findings about appliance
+							energy consumption in Australia.
+						</p>
+					</article>
+					<article>
+						<h2>Technology</h2>
+						<p>Built with HTML, CSS and JavaScript, with no external framework.</p>
+					</article>
+				</div>
+			</section>
 		</main>
-		<script src="js/main.js" defer></script>
+
+		<footer>
+			<p>&copy; <span id="year">2026</span> Kelvin Fong</p>
+			<p>GenAI acknowledgement: OpenAI Codex assisted with the initial code and content.</p>
+		</footer>
 	</body>
 </html>
