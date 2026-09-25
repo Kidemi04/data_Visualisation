@@ -1,8 +1,8 @@
 :root {
-	--orange: #e98b16;
-	--yellow: #ffe49a;
-	--yellow-light: #fff7dc;
-	--brown: #6f583b;
+	--orange: #eba746;
+	--yellow: #f8e8a5;
+	--yellow-light: #fdf8e8;
+	--brown: #7d6744;
 	--ink: #17212b;
 	--muted: #52606d;
 	--line: #ded8cf;
@@ -65,18 +65,15 @@ button {
 	align-items: center;
 	gap: 0.6rem;
 	font-weight: 700;
+	padding: 0.35rem 0.5rem;
+	border-radius: 0.4rem;
 }
 
 .brand-mark {
-	width: 2.5rem;
-	height: 2.5rem;
-	display: grid;
-	place-items: center;
-	border-radius: 50%;
-	background: var(--yellow);
-	color: var(--orange);
-	border: 2px solid var(--brown);
-	font-size: 1.45rem;
+	width: 3rem;
+	height: 3rem;
+	object-fit: contain;
+	flex-shrink: 0;
 }
 
 .nav-links {
@@ -89,6 +86,8 @@ button {
 	border-radius: 0.4rem;
 }
 
+.brand:hover,
+.brand:focus-visible,
 .nav-links button:hover,
 .nav-links button:focus-visible {
 	background: var(--yellow-light);
@@ -127,7 +126,7 @@ main {
 	font-weight: 700;
 	letter-spacing: 0.08em;
 	text-transform: uppercase;
-	color: var(--orange);
+	color: var(--brown);
 }
 
 h1,
@@ -176,6 +175,10 @@ h2 {
 	border: 1px solid var(--line);
 	border-radius: 0.25rem;
 	padding: 1.5rem;
+}
+
+.summary-card {
+	border-top: 4px solid var(--orange);
 }
 
 .summary-card ul {
